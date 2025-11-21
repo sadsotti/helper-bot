@@ -104,6 +104,29 @@ Non caricare mai `.env` su GitHub.
 
 ---
 
+## **🔑 Ottenere la OpenAI API Key**
+
+Per usare l’AI nel bot serve una **API key OpenAI**.  
+OpenAI **non è gratuita**: serve credito attivo, ma **bastano pochi euro per fare migliaia di richieste**, soprattutto usando modelli economici come `gpt-4o-mini`.
+
+### Come ottenerla:
+
+1. Vai su https://platform.openai.com  
+2. Accedi  
+3. Vai in **User → API Keys**  
+4. Clicca **Create new secret key**  
+5. Copia la chiave  
+6. Inseriscila nel tuo `.env`:
+
+```
+OPENAI_API_KEY=la_tua_chiave
+```
+
+⚠️ **Non condividerla mai**  
+⚠️ Se finisce online → **rigenerala subito**
+
+---
+
 ## **🚀 Avvio del bot**
 
 ```bash
