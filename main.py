@@ -41,7 +41,6 @@ async def on_message(message: discord.Message):
     if message.author.bot:
         return
 
-    # Trigger: risponde solo ai messaggi che terminano con "*"
     if message.content.endswith("*"):
         try:
             risposta = await ask_openai(message.content)
