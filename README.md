@@ -1,29 +1,29 @@
 # **Helper Bot 🐱 – Discord AI Assistant**
 
-Bot Discord sviluppato in Python che utilizza l’AI per rispondere alle domande degli utenti e fornire assistenza tecnica direttamente in chat.  
-È leggero, semplice da configurare e pronto da avviare sia in locale che su piattaforme come Railway.
+Discord bot developed in Python that uses AI to answer user questions and provide technical assistance directly in chat.  
+It is lightweight, easy to configure, and ready to run either locally or on platforms like Railway.
 
 ---
 
-## **✨ Funzionalità principali**
-- 📌 Risponde automaticamente ai messaggi che terminano con `*`
-- 🤖 Integra l’AI tramite OpenAI per generare risposte utili e chiare
-- ⚙️ Comando `/ping`
-- 🧵 Codice semplice e facilmente estendibile
-- ☁️ Deploy rapido su Railway o localmente
+## **✨ Main Features**
+- 📌 Automatically replies to messages ending with `*`
+- 🤖 Integrates AI via OpenAI to generate helpful and clear responses
+- ⚙️ `/ping` command
+- 🧵 Simple and easily extendable code
+- ☁️ Fast deployment on Railway or locally
 
 ---
 
-## **📦 Installazione**
+## **📦 Installation**
 
-Clona la repo:
+Clone the repository:
 
 ```bash
 git clone https://github.com/sadsotti/helper-bot.git
 cd helper-bot
 ```
 
-Installa le dipendenze:
+Install the dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -31,50 +31,50 @@ pip install -r requirements.txt
 
 ---
 
-## **🔧 Creazione del bot Discord**
+## **🔧 Creating the Discord Bot**
 
-### **1️⃣ Crea l'app nel Developer Portal**
-1. Vai su https://discord.com/developers/applications  
-2. Clicca **“New Application”**  
-3. Dai un nome al bot → *Helper Bot*  
-4. Conferma
-
----
-
-### **2️⃣ Crea il bot**
-1. Vai su **Bot** nel menu a sinistra  
-2. Clicca **“Add Bot”**  
-3. Conferma con *Yes, do it!*  
-4. (Opzionale) Imposta icona e nome
+### **1️⃣ Create the app in the Developer Portal**
+1. Go to https://discord.com/developers/applications 
+2. Click “New Application” 
+3. Give the bot a name → Helper Bot 
+4. Confirm
 
 ---
 
-### **3️⃣ Copia il token**
+### **2️⃣ Create the bot**
+1. Go to **Bot** in the menu on the left  
+2. Click **“Add Bot”**  
+3. Confirm with *Yes, do it!*  
+4. (Optional) Set icon and name
+
+---
+
+### **3️⃣ Copy the token**
 In **Bot → Token**:
-1. Clicca **Reset Token**  
-2. Copia la chiave  
-3. Mettila nel tuo `.env`:
+1. Click **Reset Token**  
+2. Copy the key  
+3. Put it in your `.env`:
 
 ```
-DISCORD_TOKEN=IL_TUO_TOKEN
+DISCORD_TOKEN=YOUR_TOKEN
 ```
 
-⚠️ Non condividere MAI il token.
+⚠️ Never share your token.
 
 ---
 
-### **4️⃣ Abilita i Privileged Gateway Intents**
-Sempre in **Bot**:
+### **4️⃣ Enable Privileged Gateway Intents**
+Still in **Bot**:
 - ✔ Message Content Intent  
-- ✔ (Opzionale) Presence Intent  
-- ✔ (Opzionale) Server Members Intent  
+- ✔ (Optional) Presence Intent  
+- ✔ (Optional) Server Members Intent  
 
-Salva.
+Save.
 
 ---
 
-### **5️⃣ Invita il bot nel server**
-Vai su **OAuth2 → URL Generator**
+### **5️⃣ Invite the bot to the server**
+Go to **OAuth2 → URL Generator**
 
 **Scopes:**
 - `bot`
@@ -85,75 +85,75 @@ Vai su **OAuth2 → URL Generator**
 - `Send Messages`
 - `Use Slash Commands`
 
-Copia il link generato → aprilo → scegli il tuo server → **Authorize**.
+Copy the generated link → open it → select your server → **Authorize**.
 
-Il bot ora appare nel server (offline fino all'avvio dello script).
-
----
-
-## **🔐 Configurazione**
-
-Crea un file `.env`:
-
-```
-DISCORD_TOKEN=il_tuo_token_del_bot
-OPENAI_API_KEY=la_tua_api_key_openai
-```
-
-Non caricare mai `.env` su GitHub.
+The bot will now appear in the server (offline until you run the script).
 
 ---
 
-## **🔑 Ottenere la OpenAI API Key**
+## **🔐 Configuration**
 
-Per usare l’AI nel bot serve una **API key OpenAI**.  
-OpenAI **non è gratuita**: serve credito attivo, ma **bastano pochi euro per fare migliaia di richieste**, soprattutto usando modelli economici come `gpt-4o-mini`.
-
-### Come ottenerla:
-
-1. Vai su https://platform.openai.com  
-2. Accedi  
-3. Vai in **User → API Keys**  
-4. Clicca **Create new secret key**  
-5. Copia la chiave  
-6. Inseriscila nel tuo `.env`:
+Create a `.env` file:
 
 ```
-OPENAI_API_KEY=la_tua_chiave
+DISCORD_TOKEN=your_bot_token
+OPENAI_API_KEY=your_openai_api_key
 ```
 
-⚠️ **Non condividerla mai**  
-⚠️ Se finisce online → **rigenerala subito**
+Never upload `.env` to GitHub.
 
 ---
 
-## **🚀 Avvio del bot**
+## **🔑 Getting the OpenAI API Key**
+
+To use AI in the bot, you need an **API key OpenAI**.  
+OpenAI is **not free**: you need active credits, but **just a few euros are enough for thousands of requests**, especially when using inexpensive models like `gpt-4o-mini`.
+
+### How to get it:
+
+1. Go to https://platform.openai.com 
+2. Log in 
+3. Go to **User → API Keys**  
+4. Click **Create new secret key**  
+5. Copy the key  
+6. Insert it into your `.env`:
+
+```
+OPENAI_API_KEY=your_key
+```
+
+⚠️ **Never share it**  
+⚠️ If it goes online → **regenerate it immediately**
+
+---
+
+## **🚀 Starting the bot**
 
 ```bash
 python main.py
 ```
 
-Output atteso:
+Expected output:
 
 ```
-Bot attivo come: Helper Bot 🐱
+Bot active as: Helper Bot 🐱
 ```
 
 ---
 
-## **💬 Come si usa**
+## **💬 How to use**
 
-### **1. Interazione AI automatica**
-Il bot risponde ai messaggi che terminano con:
+### **1. Automatic AI interaction**
+The bot replies to messages ending with:
 
 ```
 *
 ```
 
-Esempio:
+Example:
 
 ```
-Perché Python mi dà errore su una lista?*
+Why is Python giving me an error on a list?*
 ```
 
 ### **2. Slash command**
@@ -161,7 +161,7 @@ Perché Python mi dà errore su una lista?*
 /ping
 ```
 
-Risposta:
+Response:
 
 ```
 Pong! 🏓
@@ -169,22 +169,22 @@ Pong! 🏓
 
 ---
 
-## **🧠 Come il bot capisce che stai parlando con lui**
+## **🧠 How the bot knows you're talking to it**
 
-Il bot controlla la fine del messaggio:
+The bot checks the end of the message:
 
 ```python
 if message.content.endswith("*"):
 ```
 
-Quindi risponde **solo** quando vuoi tu.
+So it replies **only** when you want it to.
 
 ---
 
-## **☁️ Deploy su Railway**
+## **☁️ Deploy on Railway**
 
-### 1️⃣ Carica il progetto su GitHub  
-Assicurati di avere il tuo `.gitignore` configurato:
+### 1️⃣ Upload the project to GitHub  
+Make sure your `.gitignore` is configured:
 
 ```
 .env
@@ -192,28 +192,28 @@ __pycache__/
 venv/
 ```
 
-### 2️⃣ Vai su Railway → New Project → Deploy from GitHub
+### 2️⃣ Go to Railway → New Project → Deploy from GitHub
 
-### 3️⃣ Imposta le variabili d’ambiente:
+### 3️⃣ Set the environment variables:
 - `DISCORD_TOKEN`
 - `OPENAI_API_KEY`
 
-### 4️⃣ Comando di avvio:
+### 4️⃣ Startup command:
 ```
 python main.py
 ```
 
-Railway avvierà il bot automaticamente.
+Railway will automatically start the bot.
 
 ---
 
-## **🛠 Personalizzazione**
+## **🛠 Customization**
 
-Puoi facilmente aggiungere:
-- nuovi comandi
-- analisi più complesse dei messaggi
-- risposte nei thread
-- canali dedicati
-- sistemi ticket
+You can easily add:
+- new commands
+- more complex message parsing
+- thread replies
+- dedicated channels
+- ticket systems
 
 ---
