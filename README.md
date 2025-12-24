@@ -1,7 +1,7 @@
 # **Helper Bot 🐱 – Discord AI Assistant**
 
 Discord bot developed in Python that uses AI to answer user questions and provide technical assistance directly in chat.  
-It is lightweight, easy to configure, and ready to run either locally or on platforms like Railway.
+It is lightweight, easy to configure, and ready to run either locally or on platforms like WispByte.
 
 ---
 
@@ -10,7 +10,7 @@ It is lightweight, easy to configure, and ready to run either locally or on plat
 - 🤖 Integrates AI via OpenAI to generate helpful and clear responses
 - ⚙️ `/ping` command
 - 🧵 Simple and easily extendable code
-- ☁️ Fast deployment on Railway or locally
+- ☁️ Fast deployment on WispByte or locally
 
 ---
 
@@ -181,29 +181,32 @@ So it replies **only** when you want it to.
 
 ---
 
-## **☁️ Deploy on Railway**
+## **☁️ Deploy on WispByte**
 
-### 1️⃣ Upload the project to GitHub  
-Make sure your `.gitignore` is configured:
+### 1️⃣ Prepare your files
 
+Make sure you have `main.py`, `requirements.txt` and `.env` ready.
+
+### 2️⃣ Upload to WispByte
+
+1. Log in to the WispByte Panel.
+2. Go to Files and upload your project files.
+   Tip: Upload a .zip and use the "Unarchive" feature for faster uploads.
+
+### 3️⃣ Startup Settings
+
+Go to the Startup tab and configure:
+- Python Version: Select Python 3.10/3.11 (Avoid 3.13 as it has compatibility issues with some libraries like audioop).
+- Startup Command:
+  
 ```
-.env
-__pycache__/
-venv/
+pip install -r requirements.txt && python main.py
 ```
 
-### 2️⃣ Go to Railway → New Project → Deploy from GitHub
+### 4️⃣ Start the Bot
 
-### 3️⃣ Set the environment variables:
-- `DISCORD_TOKEN`
-- `OPENAI_API_KEY`
-
-### 4️⃣ Startup command:
-```
-python main.py
-```
-
-Railway will automatically start the bot.
+Go to the Console and click Start.
+The panel will automatically install the requirements and launch the bot.
 
 ---
 
